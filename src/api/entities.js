@@ -1,11 +1,11 @@
-import { base44 } from './base44Client';
+import { base44, unauthenticatedBase44 } from './base44Client';
 
 
 export const Program = base44.entities.Program;
 
 export const ProgramTask = base44.entities.ProgramTask;
 
-export const Employee = base44.entities.Employee;
+export const Employee = unauthenticatedBase44.entities.Employee;
 
 export const ActivityPool = base44.entities.ActivityPool;
 

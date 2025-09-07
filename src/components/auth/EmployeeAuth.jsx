@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Employee } from "@/api/entities";
+import { Employee, User } from "@/api/entities";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -28,6 +28,12 @@ export default function EmployeeAuth({ onSuccess }) {
             );
 
             if (employee) {
+                // Establish authenticated session with Base44 SDK
+                await User.login({
+                    username: employeeId,
+                    password: password
+                });
+                
                 // שמירת פרטי העובד המחובר בsessionStorage
                 sessionStorage.setItem("currentEmployee", JSON.stringify(employee));
                 window.dispatchEvent(new Event('authChange')); // Notify layout of login
