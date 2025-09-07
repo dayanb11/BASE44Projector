@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Building2, User, Lock, AlertCircle } from "lucide-react";
+import { Building2, User as UserIcon, Lock, AlertCircle } from "lucide-react";
 
 export default function EmployeeAuth({ onSuccess }) {
     const [employeeId, setEmployeeId] = useState("");
@@ -71,7 +71,7 @@ export default function EmployeeAuth({ onSuccess }) {
                         <div>
                             <label className="block text-sm font-medium mb-2">מספר עובד</label>
                             <div className="relative">
-                                <User className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                                <UserIcon className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                                 <Input
                                     type="text"
                                     placeholder="הזן מספר עובד"
