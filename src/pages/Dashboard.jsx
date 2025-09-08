@@ -20,13 +20,12 @@ export default function Dashboard() {
   const location = useLocation();
 
   useEffect(() => {
-    // בדיקה אם יש עובד מחובר
     const storedEmployee = sessionStorage.getItem("currentEmployee");
     if (storedEmployee) {
       setCurrentEmployee(JSON.parse(storedEmployee));
       loadData();
     } else {
-      setCurrentEmployee(null); // Ensure currentEmployee is null if no stored employee
+      setCurrentEmployee(null);
       setIsLoading(false);
     }
   }, [location]);

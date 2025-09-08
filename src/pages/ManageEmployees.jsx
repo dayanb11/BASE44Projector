@@ -44,7 +44,6 @@ export default function ManageEmployees() {
     } else {
       setCurrentEmployee(null);
     }
-  }, []); // Modified useEffect for authentication
 
   const handleEmployeeLogin = (employee) => {
     setCurrentEmployee(employee);

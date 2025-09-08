@@ -133,7 +133,6 @@ export default function ProgramsPage() {
             setCurrentEmployee(null);
             setIsLoading(false); // If no employee, stop loading state and show login
         }
-    }, [location]); // Depend on location to re-check authentication if navigating
 
     // Handle URL parameters (when coming from dashboard status click)
     useEffect(() => {

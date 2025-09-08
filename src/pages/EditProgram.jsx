@@ -31,13 +31,12 @@ export default function EditProgramPage() {
             if (id) {
                 loadProgram(id);
             } else {
-                setIsLoading(false); // No ID, so not loading program data, but employee is logged in
+                setIsLoading(false);
             }
         } else {
-            setCurrentEmployee(null); // No employee in session storage
-            setIsLoading(false); // Not loading program data, waiting for login
+            setCurrentEmployee(null);
+            setIsLoading(false);
         }
-    }, [location]); // Depend on location to re-evaluate if URL changes
 
     const handleEmployeeLogin = (employee) => {
         setCurrentEmployee(employee);

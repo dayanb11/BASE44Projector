@@ -109,7 +109,6 @@ export default function ProgramDetailsPage() {
             setCurrentEmployee(null);
             setIsLoading(false);
         }
-    }, [location, loadData]); // loadData is a dependency because it's called inside this effect
 
     const handleEmployeeLogin = (employee) => {
         setCurrentEmployee(employee);
