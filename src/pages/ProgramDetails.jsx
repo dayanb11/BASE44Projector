@@ -109,6 +109,7 @@ export default function ProgramDetailsPage() {
             setCurrentEmployee(null);
             setIsLoading(false);
         }
+    }, [location.search, loadData]);
 
     const handleEmployeeLogin = (employee) => {
         setCurrentEmployee(employee);
