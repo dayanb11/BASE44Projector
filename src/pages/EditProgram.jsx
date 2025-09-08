@@ -37,6 +37,8 @@ export default function EditProgramPage() {
             setCurrentEmployee(null);
             setIsLoading(false);
         }
+    }
+    )
 
     const handleEmployeeLogin = (employee) => {
         setCurrentEmployee(employee);
