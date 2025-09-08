@@ -44,6 +44,7 @@ export default function ManageEmployees() {
     } else {
       setCurrentEmployee(null);
     }
+  }, []);
 
   const handleEmployeeLogin = (employee) => {
     setCurrentEmployee(employee);
