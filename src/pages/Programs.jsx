@@ -133,6 +133,7 @@ export default function ProgramsPage() {
             setCurrentEmployee(null);
             setIsLoading(false); // If no employee, stop loading state and show login
         }
+    }, [location]);
 
     // Handle URL parameters (when coming from dashboard status click)
     useEffect(() => {
