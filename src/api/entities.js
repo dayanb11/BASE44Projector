@@ -22,4 +22,4 @@ export const ProcurementTeam = base44.entities.ProcurementTeam;
 
 
 // auth sdk:
-export const User = base44.auth;
+export const User = unauthenticatedBase44.auth;
